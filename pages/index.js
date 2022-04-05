@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { attributes, react as HomeContent } from "../content/home.md";
+import { attributes, react as HomeContent } from "../content/pages/home.md";
 
 export default function Home() {
-	console.log(attributes);
-	const { title, cats } = attributes;
+	// console.log(aaa);
+	const { title, description } = attributes;
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -19,11 +19,12 @@ export default function Home() {
 			<main className={styles.main}>
 				<div>
 					<h2>{title}</h2>
-					<ul>
+					<p>{description}</p>
+					{/* <ul>
 						{cats.map((cat, i) => (
 							<li key={i}>{cat.name}</li>
 						))}
-					</ul>
+					</ul> */}
 					<HomeContent />
 				</div>
 			</main>
